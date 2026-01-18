@@ -31,9 +31,9 @@ const Navbar = () => {
       }`}
     >
       <div className="container mx-auto px-6 flex items-center justify-between">
-        <a href="#" className="font-display text-xl font-bold gradient-text">
+        <span className="font-display text-xl font-bold gradient-text">
           Simi Elsa Koshy
-        </a>
+        </span>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-8">

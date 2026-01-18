@@ -8,9 +8,9 @@ const Footer = () => {
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="text-center md:text-left">
-            <a href="#" className="font-display text-xl font-bold gradient-text">
+            <span className="font-display text-xl font-bold gradient-text">
               Simi Elsa Koshy
-            </a>
+            </span>
             <p className="text-sm text-muted-foreground mt-2">
               © {currentYear} All rights reserved.
             </p>
