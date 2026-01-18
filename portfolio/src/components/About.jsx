@@ -34,7 +34,7 @@ const education = [
   {
     icon: GraduationCap,
     title: "Bachelor of Computer Applications",
-    institution: "Kristu Jyoti College",
+    institution: "Kristu Jyoti College of Management and Technology",
     period: "2019 – 2022",
     score: "89.99%",
   },
