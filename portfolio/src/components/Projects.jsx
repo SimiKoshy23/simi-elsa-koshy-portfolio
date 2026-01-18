@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Building2, Heart, Zap, Shield, CheckCircle2 } from "lucide-react";
+import { Building2, Heart, Zap, CheckCircle2 } from "lucide-react";
 
 const projects = [
   {

@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
-import { Mail, MapPin, Phone, Send, Linkedin } from "lucide-react";
+import { useRef } from "react";
+import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
 
 const contactInfo = [
   {

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Zap, Users, Award, Briefcase, GraduationCap } from "lucide-react";
+import { Zap, Users, Briefcase, GraduationCap } from "lucide-react";
 const highlights = [
   {
     icon: Zap,
