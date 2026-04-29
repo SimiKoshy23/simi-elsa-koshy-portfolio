@@ -47,7 +47,7 @@ const Hero = () => {
         }} transition={{
           duration: 0.6,
           delay: 0.2
-        }} className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">Frontend Developer with 3 years of experience specializing in React, Next.js, TypeScript & accessibility-first development.</motion.p>
+        }} className="text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">Frontend Developer with 3+ years of experience specializing in React, Next.js, TypeScript & accessibility-first development.</motion.p>
 
           <motion.div initial={{
           opacity: 0,

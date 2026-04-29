@@ -1,6 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Building2, Heart, Zap, CheckCircle2 } from "lucide-react";
+import { Building2, Heart, Zap, CheckCircle2, ShoppingCart, ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
@@ -51,6 +51,29 @@ const projects = [
     gradient: "from-yellow-500/20 to-orange-500/20",
     iconBg: "bg-yellow-500/20",
     iconColor: "text-yellow-400",
+  }
+];
+
+const personalProjects = [
+  {
+    title: "E-Commerce Platform",
+    icon: ShoppingCart,
+    domain: "Full Stack Project",
+    description:
+      "Full-stack e-commerce application built with MERN stack, featuring product catalog, shopping cart, user authentication, and admin dashboard.",
+    achievements: [
+      "Developed responsive frontend with React and MUI",
+      "Built RESTful APIs with Express.js and Node.js",
+      "Implemented MongoDB database with optimized queries",
+      "Deployed frontend on Netlify and backend on Render",
+    ],
+    tags: ["MongoDB", "Express.js", "React.js", "Node.js", "MUI"],
+    gradient: "from-green-500/20 to-emerald-500/20",
+    iconBg: "bg-green-500/20",
+    iconColor: "text-green-400",
+    liveLink: "https://ecommerce-shop-ease.netlify.app/",
+    backendLink: "https://final-year-project-irjn.onrender.com/products",
+    githubLink: "https://github.com/SimiKoshy23/Final-Year-Project",
   }
 ];
 
@@ -124,7 +147,7 @@ const Projects = () => {
                   </div>
 
                   {/* Tags */}
-                  <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-wrap gap-2 mb-4">
                     {project.tags.map((tag) => (
                       <span
                         key={tag}
@@ -134,6 +157,45 @@ const Projects = () => {
                       </span>
                     ))}
                   </div>
+
+                  {/* Links */}
+                  {(project.liveLink || project.backendLink || project.githubLink) && (
+                    <div className="flex flex-wrap gap-3 pt-4 border-t border-muted/30">
+                      {project.liveLink && (
+                        <a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          Live Demo
+                        </a>
+                      )}
+                      {project.backendLink && (
+                        <a
+                          href={project.backendLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          API
+                        </a>
+                      )}
+                      {project.githubLink && (
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                        >
+                          <Github className="w-4 h-4" />
+                          Code
+                        </a>
+                      )}
+                    </div>
+                  )}
                 </div>
               </motion.div>
             ))}
@@ -148,6 +210,111 @@ const Projects = () => {
           >
             * Due to NDA restrictions, specific client details and live links cannot be shared.
           </motion.p>
+
+          {/* Personal Projects Section */}
+          <div className="text-center mb-16 mt-20">
+            <h2 className="font-display text-4xl md:text-5xl font-bold mt-4">
+              Personal <span className="gradient-text">Projects</span>
+            </h2>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-6">
+            {personalProjects.map((project, index) => (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className={`group glass-card rounded-2xl overflow-hidden hover-lift`}
+              >
+                {/* Gradient Header */}
+                <div className={`h-2 bg-gradient-to-r ${project.gradient}`} />
+                
+                <div className="p-6">
+                  {/* Header */}
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className={`w-12 h-12 rounded-xl ${project.iconBg} flex items-center justify-center flex-shrink-0`}>
+                      <project.icon className={`w-6 h-6 ${project.iconColor}`} />
+                    </div>
+                    <div>
+                      <span className="text-xs text-primary font-medium uppercase tracking-wider">
+                        {project.domain}
+                      </span>
+                      <h3 className="font-display text-xl font-semibold mt-1">
+                        {project.title}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-muted-foreground text-sm mb-4 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Achievements */}
+                  <div className="space-y-2 mb-5">
+                    {project.achievements.map((achievement, i) => (
+                      <div key={i} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-4 h-4 text-primary mt-0.5 flex-shrink-0" />
+                        <span className="text-sm text-muted-foreground">{achievement}</span>
+                      </div>
+                    ))}
+                  </div>
+
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2.5 py-1 bg-muted/50 rounded-md text-xs font-medium text-muted-foreground"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+
+                  {/* Links */}
+                  {(project.liveLink || project.backendLink || project.githubLink) && (
+                    <div className="flex flex-wrap gap-3 pt-4 border-t border-muted/30">
+                      {project.liveLink && (
+                        <a
+                          href={project.liveLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          Live Demo
+                        </a>
+                      )}
+                      {project.backendLink && (
+                        <a
+                          href={project.backendLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                          API
+                        </a>
+                      )}
+                      {project.githubLink && (
+                        <a
+                          href={project.githubLink}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+                        >
+                          <Github className="w-4 h-4" />
+                          Code
+                        </a>
+                      )}
+                    </div>
+                  )}
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
     </section>

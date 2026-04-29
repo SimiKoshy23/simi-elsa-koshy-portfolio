@@ -28,8 +28,8 @@ const education = [
     icon: GraduationCap,
     title: "Master of Computer Applications",
     institution: "Lovely Professional University",
-    period: "2024 – Present",
-    score: "Ongoing",
+    period: "2024 – 2026",
+    score: "77.40%",
   },
   {
     icon: GraduationCap,
@@ -99,7 +99,7 @@ const About = () => {
               <div className="glass-card rounded-2xl p-8 relative overflow-hidden mb-8">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-2xl" />
                 <p className="text-lg text-muted-foreground leading-relaxed relative z-10">
-                  Frontend Developer with 3 years of experience across{" "}
+                  Frontend Developer with 3+ years of experience across{" "}
                   <span className="text-foreground font-medium">
                     banking, healthcare, and energy sectors
                   </span>
